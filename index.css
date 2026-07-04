@@ -1237,22 +1237,167 @@ footer {
 
 @media (max-width: 768px) {
   header {
-    padding: 1.25rem 0;
+    padding: 0.75rem 0;
+  }
+  
+  .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.15rem;
   }
   
   nav {
-    display: none; /* Can build burger menu if user wants, but simple header works */
+    display: flex;
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0.6rem 0 0.35rem 0;
+    margin-top: 0.5rem;
+    gap: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    scrollbar-width: none;
+  }
+  
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  nav a {
+    font-size: 0.85rem;
+    padding-right: 0.25rem;
+  }
+  
+  #nav-booking-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
   
   section {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
+  }
+  
+  /* Timeline */
+  .timeline {
+    padding-left: 1.25rem;
+  }
+  
+  /* Offers Grid */
+  .offers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+    gap: 1rem !important;
+  }
+  
+  /* Roadmap Section */
+  .roadmap-step {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .roadmap-step:not(:last-child)::after {
+    display: none !important;
+  }
+  
+  .roadmap-num-box {
+    width: 50px !important;
+    height: 35px !important;
+    border-radius: var(--border-radius-sm) !important;
+    margin-bottom: 0.25rem;
+    border-width: 1.5px !important;
+  }
+  
+  .roadmap-num-box span {
+    font-size: 1.1rem !important;
   }
   
   .roadmap-detail-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
   
+  .roadmap-detail-grid div:nth-child(2) {
+    border-left: none !important;
+    border-top: 1px solid var(--border-color) !important;
+    padding-left: 0 !important;
+    padding-top: 1.5rem !important;
+  }
+  
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Booking Cards */
   .booking-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Modal responsive close button positioning to avoid offscreen clipping */
+  .modal-content-wrapper {
+    max-width: 95%;
+    max-height: 90%;
+    padding: 2.25rem 1rem 1rem 1rem;
+  }
+  
+  .modal-close-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
+    z-index: 10;
+  }
+  
+  .modal-image {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero typography and social link stack for narrow screens */
+  h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  
+  .social-links .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .profile-avatar-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-name {
+    font-size: 1.4rem;
+  }
+  
+  .hero-card {
+    padding: 1.75rem 1.25rem;
+  }
+  
+  .stat-row {
+    gap: 1rem;
+  }
+  
+  .stat-val {
+    font-size: 1.5rem;
+  }
+  
+  .stat-lbl {
+    font-size: 0.75rem;
   }
 }
