@@ -1,0 +1,9 @@
+# Secure ignores
+offer emails ss/
+grid_offers/
+__pycache__/
+*.pyc
+
+# Local system files
+.DS_Store
+Thumbs.db
