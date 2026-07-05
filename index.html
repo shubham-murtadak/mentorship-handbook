@@ -1005,8 +1005,58 @@
     </div>
   </div>
 
+  <!-- ==========================================================================
+       CHATBOT FLOATING WIDGET
+       ========================================================================== -->
+  <div class="chatbot-container" id="chatbot-container">
+    <!-- Chatbot Window -->
+    <div class="chat-widget" id="chat-widget">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar-status">
+            <img src="photos/shubh_linkdin_profile.png" alt="Shubham" class="chat-header-avatar">
+            <span class="status-dot"></span>
+          </div>
+          <div>
+            <h4>Shubham's AI Mentor</h4>
+            <p>Online | Powered by Groq</p>
+          </div>
+        </div>
+        <button class="chat-close-btn" id="chat-close" aria-label="Close chat">&times;</button>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-message bot">
+          <div class="message-bubble">
+            Hi! I am Shubham's AI Assistant. Ask me anything about his learning roadmap, interview handbook, or how he cracked 10+ offers!
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-suggestions">
+        <button class="suggestion-chip">How did you get into Ford?</button>
+        <button class="suggestion-chip">What is the ML roadmap?</button>
+        <button class="suggestion-chip">Is an IIT degree mandatory?</button>
+      </div>
+
+      <div class="chat-input-area">
+        <textarea id="chat-input" placeholder="Type your question..." rows="1"></textarea>
+        <button id="chat-send" aria-label="Send message">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Chat Bubble -->
+    <button class="chat-bubble" id="chat-bubble" aria-label="Open chat assistant">
+      <i class="fa-solid fa-comments"></i>
+      <span class="chat-bubble-pulse"></span>
+    </button>
+  </div>
+
   <!-- JavaScript Behavior -->
   <script src="app.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 
 </html>
